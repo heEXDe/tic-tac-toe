@@ -4,48 +4,51 @@ from tkinter import *
 
 class App(Tk):
 
-    def __init__(self, you_play_as, win_or_loose):
+    def __init__(self, you_play_as, win_or_loose, btext1, btext2, btext3, btext4, btext5, btext6, btext7, btext8,
+                 btext9):
         super().__init__()
         self.title('Tic-tac-toe')
         self.resizable(0, 0)
         self.you_play_as = you_play_as
         self.win_or_loose = win_or_loose
+        self.btext1 = btext1
+        self.btext2 = btext2
+        self.btext3 = btext3
+        self.btext4 = btext4
+        self.btext5 = btext5
+        self.btext6 = btext6
+        self.btext7 = btext7
+        self.btext8 = btext8
+        self.btext9 = btext9
 
+    # a function building the GUI
     def gui_build(self):
-        # global lbl_you_play_as
+        # creation of labels
         lbl_you_play_as = Label(self, text='You play as: ' + self.you_play_as)
         lbl_you_play_as.grid(row=0, column=0, columnspan=3, pady=5)
         lbl_win_loose = Label(self, text=self.win_or_loose)
         lbl_win_loose.grid(row=4, column=0, columnspan=3, pady=5)
-        btn_1 = Button(self, text='', height=5, width=7)
-        btn_1.grid(row=1, column=0)
-        btn_2 = Button(self, text='', height=5, width=7)
-        btn_2.grid(row=1, column=1)
-        btn_3 = Button(self, text='', height=5, width=7)
-        btn_3.grid(row=1, column=2)
-        btn_4 = Button(self, text='', height=5, width=7)
-        btn_4.grid(row=2, column=0)
-        btn_5 = Button(self, text='', height=5, width=7)
-        btn_5.grid(row=2, column=1)
-        btn_6 = Button(self, text='', height=5, width=7)
-        btn_6.grid(row=2, column=2)
-        btn_7 = Button(self, text='', height=5, width=7)
-        btn_7.grid(row=3, column=0)
-        btn_8 = Button(self, text='', height=5, width=7)
-        btn_8.grid(row=3, column=1)
-        btn_9 = Button(self, text='', height=5, width=7)
-        btn_9.grid(row=3, column=2)
+        # creation of buttons
+        self.create_button(self.btext1, 1, 0)
+        self.create_button(self.btext2, 1, 1)
+        self.create_button(self.btext3, 1, 2)
+        self.create_button(self.btext4, 2, 0)
+        self.create_button(self.btext5, 2, 1)
+        self.create_button(self.btext6, 2, 2)
+        self.create_button(self.btext7, 3, 0)
+        self.create_button(self.btext8, 3, 1)
+        self.create_button(self.btext9, 3, 2)
         btn_new_game = Button(self, text='New game', height=3, width=21)
         btn_new_game.grid(row=5, column=0, columnspan=3, padx=5)
 
-    """
-        def create_button(self, name, text, g_row, g_col, pad_x, pad_y, heig, widt):
-        self.name = 
-    """
+    # a function to create buttons
+    def create_button(self, tex, g_row, g_col):
+        Button(self, text=tex, height=5, width=7).grid(row=g_row, column=g_col)
 
+    # a function starting the GUI
     def gui_start(self):
         self.gui_build()
         self.mainloop()
 
 
-that_app = App('', '')
+that_app = App('', '', '', '', '', '', '', '', '', '', '')
