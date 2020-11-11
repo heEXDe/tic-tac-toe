@@ -43,7 +43,8 @@ class App(Tk):
 
     # a function to create buttons
     def create_button(self, tex, g_row, g_col):
-        Button(self, text=tex, height=5, width=7).grid(row=g_row, column=g_col)
+        Button(self, text=tex, height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(tex)).grid(
+            row=g_row, column=g_col)
 
     # a function starting the GUI
     def gui_start(self):
