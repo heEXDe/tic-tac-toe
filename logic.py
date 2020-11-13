@@ -54,6 +54,9 @@ class Logic:
         GUI.that_app.btn8.config(text="")
         GUI.that_app.btn9.config(text="")
         GUI.that_app.lst_points = [1, 1, 1, 1, 1, 1, 1, 1, 1]
+        self.c_or_c = random.choice(['X', 'O'])
+        # GUI.that_app.you_play_as = str(self.c_or_c)
+        # self.cross_or_circle()
 
 
 coc = random.choice(['X', 'O'])

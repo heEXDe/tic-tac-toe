@@ -35,8 +35,8 @@ class App(Tk):
     # a function building the GUI
     def gui_build(self):
         # creation of labels
-        lbl_you_play_as = Label(self, text='You play as: ' + self.you_play_as)
-        lbl_you_play_as.grid(row=0, column=0, columnspan=3, pady=5)
+        # lbl_you_play_as = Label(self, text='You play as: ' + self.you_play_as)
+        # lbl_you_play_as.grid(row=0, column=0, columnspan=3, pady=5)
         lbl_win_loose = Label(self, text=self.win_or_loose)
         lbl_win_loose.grid(row=4, column=0, columnspan=3, pady=5)
         # placing buttons
