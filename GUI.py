@@ -19,7 +19,7 @@ class App(Tk):
         super().__init__()
         self.title('Tic-tac-toe')
         self.resizable(0, 0)
-        self.you_play_as = you_play_as
+        # self.you_play_as = you_play_as
         self.win_or_loose = win_or_loose
         self.lst_points = [1, 1, 1, 1, 1, 1, 1, 1, 1]
         self.btn1 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn1))
