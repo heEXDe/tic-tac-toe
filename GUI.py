@@ -31,14 +31,14 @@ class App(Tk):
         self.btn7 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn7))
         self.btn8 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn8))
         self.btn9 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn9))
+        self.lbl_you_play_as = Label(self, text='You play as: ' + logic.logic1.c_or_c)
+        self.lbl_win_loose = Label(self, text=self.win_or_loose)
 
     # a function building the GUI
     def gui_build(self):
-        # creation of labels
-        # lbl_you_play_as = Label(self, text='You play as: ' + self.you_play_as)
-        # lbl_you_play_as.grid(row=0, column=0, columnspan=3, pady=5)
-        lbl_win_loose = Label(self, text=self.win_or_loose)
-        lbl_win_loose.grid(row=4, column=0, columnspan=3, pady=5)
+        # placing labels
+        self.lbl_you_play_as.grid(row=0, column=0, columnspan=3, pady=5)
+        self.lbl_win_loose.grid(row=4, column=0, columnspan=3, pady=5)
         # placing buttons
         self.btn1.grid(row=1, column=0)
         self.btn2.grid(row=1, column=1)
