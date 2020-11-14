@@ -6,7 +6,7 @@ from tkinter import *
 class Logic:
     def __init__(self, *args):
         self.c_or_c = random.choice(['X', 'O'])
-        # self.move_done = 0
+        self.move_done = 0
 
     def cross_or_circle(self):
         self.c_or_c = random.choice(['X', 'O'])
@@ -15,6 +15,7 @@ class Logic:
     def display_sign_on_btn(self, btn):
         btn.config(text=self.c_or_c)
         self.ai_move()
+        self.move_done = 0
 
     def ai_move(self):
         btext = GUI.that_app.btn1['text']
@@ -56,25 +57,28 @@ class Logic:
         self.ai_chooses(max_k, k8, 3, 4, 6, GUI.that_app.btn2, GUI.that_app.btn5, GUI.that_app.btn7)
 
     def ai_chooses(self, m, k, l1, l2, l3, b1, b2, b3):
-        if m == k:
-            if GUI.that_app.lst_points[l1] == 1:
+        if m == k and self.move_done == 0:
+            if GUI.that_app.lst_points[l1] == 1 and self.move_done == 0:
                 GUI.that_app.lst_points[l1] = 2
                 if self.c_or_c == 'X':
                     b1.config(text='O')
                 else:
                     b1.config(text='X')
-            if GUI.that_app.lst_points[l2] == 1:
+                self.move_done = 1
+            if GUI.that_app.lst_points[l2] == 1 and self.move_done == 0:
                 GUI.that_app.lst_points[l2] = 2
                 if self.c_or_c == 'X':
                     b2.config(text='O')
                 else:
                     b2.config(text='X')
-            if GUI.that_app.lst_points[l3] == 1:
+                self.move_done = 1
+            if GUI.that_app.lst_points[l3] == 1 and self.move_done == 0:
                 GUI.that_app.lst_points[l3] = 2
                 if self.c_or_c == 'X':
                     b3.config(text='O')
                 else:
                     b3.config(text='X')
+                self.move_done = 1
 
     def add_p_to_lst_points(self, bt, position):
         if self.c_or_c == 'X':
