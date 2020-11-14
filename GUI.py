@@ -22,15 +22,15 @@ class App(Tk):
         # self.you_play_as = you_play_as
         self.win_or_loose = win_or_loose
         self.lst_points = [1, 1, 1, 1, 1, 1, 1, 1, 1]
-        self.btn1 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn1))
-        self.btn2 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn2))
-        self.btn3 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn3))
-        self.btn4 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn4))
-        self.btn5 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn5))
-        self.btn6 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn6))
-        self.btn7 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn7))
-        self.btn8 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn8))
-        self.btn9 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn9))
+        self.btn1 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn1, 0))
+        self.btn2 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn2, 1))
+        self.btn3 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn3, 2))
+        self.btn4 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn4, 3))
+        self.btn5 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn5, 4))
+        self.btn6 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn6, 5))
+        self.btn7 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn7, 6))
+        self.btn8 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn8, 7))
+        self.btn9 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn9, 8))
         self.lbl_you_play_as = Label(self, text='You play as: ' + logic.logic1.c_or_c)
         self.lbl_win_loose = Label(self, text=self.win_or_loose)
 
