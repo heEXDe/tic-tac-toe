@@ -46,6 +46,35 @@ class Logic:
         lst_k = [k1, k2, k3, k4, k5, k6, k7, k8]
         max_k = max(lst_k)
         print(max_k)
+        self.ai_chooses(max_k, k1, 0, 1, 2, GUI.that_app.btn1, GUI.that_app.btn2, GUI.that_app.btn3)
+        self.ai_chooses(max_k, k2, 3, 4, 5, GUI.that_app.btn4, GUI.that_app.btn5, GUI.that_app.btn6)
+        self.ai_chooses(max_k, k3, 6, 7, 8, GUI.that_app.btn7, GUI.that_app.btn8, GUI.that_app.btn9)
+        self.ai_chooses(max_k, k4, 0, 3, 6, GUI.that_app.btn1, GUI.that_app.btn4, GUI.that_app.btn7)
+        self.ai_chooses(max_k, k5, 1, 4, 7, GUI.that_app.btn2, GUI.that_app.btn5, GUI.that_app.btn8)
+        self.ai_chooses(max_k, k6, 2, 5, 8, GUI.that_app.btn3, GUI.that_app.btn6, GUI.that_app.btn9)
+        self.ai_chooses(max_k, k7, 0, 4, 8, GUI.that_app.btn1, GUI.that_app.btn5, GUI.that_app.btn9)
+        self.ai_chooses(max_k, k8, 3, 4, 6, GUI.that_app.btn2, GUI.that_app.btn5, GUI.that_app.btn7)
+
+    def ai_chooses(self, m, k, l1, l2, l3, b1, b2, b3):
+        if m == k:
+            if GUI.that_app.lst_points[l1] == 1:
+                GUI.that_app.lst_points[l1] = 2
+                if self.c_or_c == 'X':
+                    b1.config(text='O')
+                else:
+                    b1.config(text='X')
+            if GUI.that_app.lst_points[l2] == 1:
+                GUI.that_app.lst_points[l2] = 2
+                if self.c_or_c == 'X':
+                    b2.config(text='O')
+                else:
+                    b2.config(text='X')
+            if GUI.that_app.lst_points[l3] == 1:
+                GUI.that_app.lst_points[l3] = 2
+                if self.c_or_c == 'X':
+                    b3.config(text='O')
+                else:
+                    b3.config(text='X')
 
     def add_p_to_lst_points(self, bt, position):
         if self.c_or_c == 'X':
