@@ -20,7 +20,7 @@ class App(Tk):
         self.title('Tic-tac-toe')
         self.resizable(0, 0)
         # self.you_play_as = you_play_as
-        self.win_or_loose = win_or_loose
+        # self.win_or_loose = win_or_loose
         self.lst_points = [1, 1, 1, 1, 1, 1, 1, 1, 1]
         self.btn1 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn1, 0))
         self.btn2 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn2, 1))
@@ -32,7 +32,7 @@ class App(Tk):
         self.btn8 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn8, 7))
         self.btn9 = Button(text='', height=5, width=7, command=lambda: logic.logic1.display_sign_on_btn(self.btn9, 8))
         self.lbl_you_play_as = Label(self, text='You play as: ' + logic.logic1.c_or_c)
-        self.lbl_win_loose = Label(self, text=self.win_or_loose)
+        self.lbl_win_loose = Label(self, text='')
 
     # a function building the GUI
     def gui_build(self):
